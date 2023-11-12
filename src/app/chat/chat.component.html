@@ -1,14 +1,18 @@
+<div class="user-token-inputs">
+  <input type="text" [(ngModel)]="username" placeholder="Enter your username">
+  <input type="text" [(ngModel)]="token" placeholder="Enter your token">
+  <button (click)="updateConnection()">Update Connection</button>
+</div>
 
 <div class="chat-container">
-    <div *ngFor="let message of messages" class="message">
-      <div class="messageText">{{ message.text }}</div>
-    </div>
-  
-    <div class="time"><span>{{ getCurrentTime() }}</span></div>
-  
-    <div class="input-container">
-      <input type="text" [(ngModel)]="newMessage" placeholder="Enter your message">
-      <button (click)="sendMessage()">Send Message</button>
-    </div>
+  <div *ngFor="let message of messages" class="message">
+    <div class="messageText">{{ message.text }}</div>
   </div>
-  
+
+  <div class="time"><span>{{ getCurrentTime() }}</span></div>
+
+  <div class="input-container">
+    <input type="text" [(ngModel)]="newMessage" placeholder="Enter your message">
+    <button (click)="sendMessage()">Send Message</button>
+  </div>
+</div>
